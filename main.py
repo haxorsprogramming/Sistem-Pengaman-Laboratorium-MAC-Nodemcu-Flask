@@ -1,5 +1,4 @@
-from flask import Flask, redirect, url_for, render_template, request, jsonify
-from controller import index    
+from flask import Flask, redirect, url_for, render_template, request, jsonify   
 
 app = Flask(__name__)
 
