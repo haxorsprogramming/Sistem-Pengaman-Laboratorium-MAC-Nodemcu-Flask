@@ -8,7 +8,7 @@
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
     <meta name="author" content="Jepnidah Hasibuan">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-    <title>Aplikasi Monitoring Ibadah Harian - LDK AL-IZZAH UINSU</title>
+    <title>Sistem Keamanan Laboratorium - Login</title>
     <!-- Icons-->
     <link rel="stylesheet" href="{{ url_for('static', filename='apaxy/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='apaxy/css/app.min.css') }}">
@@ -18,7 +18,16 @@
 {% block body %}
 
 {% endblock %}
+<!--Footer-->
 
+        <div class="col-12" style="text-align: center;">
+          <p class="text-white-100">Sistem Keamanan Laboratorium - Develop By M. Yasir Habibi Bako<br/>
+        Program Studi Ilmu Komputer, Fakultas Sains dan Teknologi<br/>
+        Universitas Islam Negeri Sumatera Utara - Medan
+        </p>
+        </div>
+
+  <!--Footer-->
  <!-- CoreUI and necessary plugins-->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
@@ -30,6 +39,7 @@
 <script src="{{ url_for('static', filename='apaxy/libs/node-waves/waves.min.js') }}"></script>
 <script src="{{ url_for('static', filename='apaxy/js/app.js') }}"></script>
 <script>
-    
+    const server = "http://127.0.0.1:5000/";
 </script>
+<script src="{{ url_for('static', filename='base/js/auth.js') }}"></script>
 </html>
