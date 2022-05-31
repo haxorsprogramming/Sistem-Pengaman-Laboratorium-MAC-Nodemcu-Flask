@@ -1,0 +1,1 @@
+## Sistem pengamanan laboratorium berbasis nodemcu dengan antarmuka web menggunakan flask

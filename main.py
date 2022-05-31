@@ -46,6 +46,11 @@ def loginProses():
 def dashboard():
     return render_template('main/dashboard.html')
 
+@app.route('/dashboard/beranda')
+def beranda():
+    return render_template('main/beranda.html')
+
+
 @app.route('/data-mahasiswa')
 def dataMahasiswa():
     mycursor.execute("SELECT * FROM tbl_mahasiswa")
