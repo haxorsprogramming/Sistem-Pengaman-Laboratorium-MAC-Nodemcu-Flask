@@ -18,7 +18,6 @@ mydb = mysql.connector.connect(
 #fungsi koneksi database
 mycursor = mydb.cursor()
 
-
 @app.route('/')
 def index():
     return render_template('auth/login.html')
@@ -50,25 +49,23 @@ def dashboard():
 def beranda():
     return render_template('main/beranda.html')
 
-
-@app.route('/data-mahasiswa')
-def dataMahasiswa():
+@app.route('/mahasiswa/data')
+def mahasiswaData():
     mycursor.execute("SELECT * FROM tbl_mahasiswa")
     myresult = mycursor.fetchall()
     container = []
+    ord = 1
     for x in myresult:
         mhs = {}
+        mhs['no'] = ord
+        mhs['kdMhs'] = x[1]
         mhs['nama'] = x[2]
         mhs['jk'] = x[3]
         mhs['prodi'] = x[4]
         mhs['nim'] = x[5]
+        ord += 1
         container.append(mhs)
-        # print(x[2])
-    
-    context = {
-        'mahasiswa' : container
-    }
-    return jsonify(context)
+    return render_template('main/mahasiswa/mahasiswa.html', container=container)
 
 @app.route('/data-mahasiswa/tambah/proses', methods = ['POST', 'GET'])
 def prosesTambahMahasiswa():

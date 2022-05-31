@@ -1,0 +1,22 @@
+<div id="divMahasiswa">
+    {% include 'main/mahasiswa/datamahasiswa.html' %}
+    {% include 'main/mahasiswa/modal.html' %}
+</div>
+
+<script>
+    // vue object 
+    var appMhs = new Vue({
+        el : '#divMahasiswa',
+        data : {
+
+        },
+        methods : {
+            tambahMahasiswaAtc : function()
+            {
+                $("#modalTambahMahasiswa").modal("show");
+            }
+        }
+    });
+    // inisialisasi 
+    $("#tblDataKaryawan").dataTable();
+</script>
