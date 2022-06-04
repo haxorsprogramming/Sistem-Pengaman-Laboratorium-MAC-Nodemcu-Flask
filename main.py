@@ -67,6 +67,15 @@ def mahasiswaData():
         container.append(mhs)
     return render_template('main/mahasiswa/mahasiswa.html', container=container)
 
+@app.route('/mahasiswa/tambah/proses', methods = ['POST', 'GET'])
+def mahasiswaTambahProses():
+    kdMahasiswa = ''.join(random.choices(string.ascii_lowercase, k=7))
+    context = {
+        'status' : 'sukses',
+        'kdMhs' : kdMahasiswa
+    }
+    return jsonify(context)
+
 @app.route('/data-mahasiswa/tambah/proses', methods = ['POST', 'GET'])
 def prosesTambahMahasiswa():
     kdMahasiswa = ''.join(random.choices(string.ascii_lowercase, k=7))

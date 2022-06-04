@@ -3,27 +3,43 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title mt-0" id="myModalLabel">Tambah Divisi
+                <h5 class="modal-title mt-0" id="myModalLabel">Tambah Mahasiswa
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label>Nama Divisi</label>
-                    <input type="text" class="form-control" id="txtNamaDivisi">
+                    <label>Nama Mahasiswa</label>
+                    <input type="text" class="form-control" id="txtNama">
+                </div>
+                <div class="form-group">
+                    <label>NIM (Nomor Induk Mahasiswa)</label>
+                    <input type="text" class="form-control" id="txtNim">
                 </div>
                 <div class="form-group mt-2">
-                    <label>Keterangan Divisi</label>
-                    <textarea class="form-control" id="txtKeterangan" style="resize:none;"></textarea>
+                    <label>Jenis Kelamin</label>
+                    <select class="form-control" id="txtJk">
+                        <option value="L">Laki-laki</option>
+                        <option value="P">Perempuan</option>
+                    </select>
+                </div>
+                <div class="form-group mt-2">
+                    <label>Program Studio</label>
+                    <select class="form-control" id="txtProdi">
+                        <option value="Ilmu Komputer">Ilmu Komputer</option>
+                        <option value="Sistem Informasi">Sistem Informasi</option>
+                        <option value="Fisika">Fisika</option>
+                        <option value="Biologi">Biologi</option>
+                        <option value="Matematika">Matematika</option>
+                    </select>
                 </div>
                 <div>
 
                 </div>
             </div>
             <div class="modal-footer">
-                <a href="javascript:void(0)" class="btn btn-primary">Simpan Data</a>
+                <a href="javascript:void(0)" class="btn btn-primary" @click="simpanDataAtc()">Simpan Data</a>
                 <button type="button" class="btn btn-light waves-effect" data-bs-dismiss="modal">Close</button>
-
             </div>
         </div>
     </div>
